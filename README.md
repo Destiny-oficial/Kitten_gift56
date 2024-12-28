@@ -39,7 +39,7 @@ Si deseas alguna funcionalidad adicional, comunícate con el desarrollador. ¡Tu
 ### **Masha Hosting**
 - **Dashboard:** [Masha Hosting](https://dash.masha-host.shop)
 - **Canal de WhatsApp:** [Unirse](https://whatsapp.com/channel/0029VaoyLfA0LKZKjEh5Yh1J)
-- **Código de Referencia:** `d7EMOE9D`
+- **Código de Referencia:** `Destiny`
 
 ### **Otros Hosting Disponibles**
 #### Sky Ultra Plus
