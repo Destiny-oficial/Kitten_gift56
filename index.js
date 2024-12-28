@@ -714,6 +714,14 @@ case "menu":
 ✦ *#guess*
 → gana dinero haciendo acertijos
 
+*bal* - *banco* 
+para ver el dinero obtenido.
+
+*depositar* - *d* + [cantidad/all]
+para depositar tu dinero en el banco.
+
+*retirar* - *r* + [cantidad/all]
+para retirar dinero del banco.
 
 »  ⊹˚୨ •(=^●ω●^=)•  *Gacha* ⊹
 
@@ -743,7 +751,7 @@ case "menu":
 ✦ *#𝑛𝑒𝑘𝑜 • #gato*
 → 𝑚𝑢𝑒𝑠𝑡𝑟𝑎 𝑢𝑛𝑎 𝑖𝑚𝑎𝑔𝑒𝑛 𝑑𝑒 𝑢𝑛 𝑛𝑒𝑘𝑜.
  
-✦ *#sell + nombre de waifu*
+✦ *#sellw + nombre de waifu*
 → para vender una waifu.
  
 ✦ *#buyw + nombre*
@@ -997,22 +1005,22 @@ case "banco": {
         return enviar("❖ El bot *Destiny Neko* está desactivado en este grupo. Un *administrador* puede activarlo con el comando: » *#bot on*");
     }
 
-    // Inicializar balance si no existe
-    if (!bal[sender]) {
-        bal[sender] = { banco: 0, dinero: 0 }; // Dinero en banco y en mano
+    // Asegurar que el balance para el usuario actual exista y sea válido
+    if (!bal[sender] || typeof bal[sender] !== "object" || bal[sender] === null) {
+        bal[sender] = { banco: 0, dinero: 0 }; // Crear entrada válida si no existe
     }
 
-    const { banco, dinero } = bal[sender];
+    // Extraer valores correctamente del objeto
+    const { banco = 0, dinero = 0 } = bal[sender]; // Usa valores predeterminados si faltan claves
     const total = banco + dinero;
 
     // Mostrar el balance con detalles
     enviar(
         `💰 *Tu dinero Actual es de:*\n\n` +
         `- Efectivo: *${dinero}* ${moneda}\n` +
-        `- Banco: *${bal[sender]}* ${moneda}\n` +
+        `- Banco: *${banco}* ${moneda}\n` +
         `- Total: *${total}* ${moneda}\n\n` +
-'> banco ilustrativo de Neko Bot'
-        
+        "> banco ilustrativo de Neko Bot"
     );
 
     // Inicializar el usuario si no existe en el objeto `user`
@@ -1024,7 +1032,7 @@ case "banco": {
     // Incrementar el nivel si alcanza el umbral
     if (user[sender].comandos % comandosPorNivel === 0) {
         user[sender].nivel += 1;
-        enviar(`🎉 ¡Felicidades! Has subido al nivel ${user[sender].nivel} (${obtenerRango(user[sender].nivel)}).`);
+        enviar(`🎉 ¡Felicidades! Has subido al nivel ${user[sender].nivel} (${obtenerRango(user[sender].nivel).nombre}).`);
     }
 
     // Guardar cambios en los archivos
@@ -1683,79 +1691,6 @@ fs.writeFileSync('user.json', JSON.stringify(user, null, 2));
     break;
 }
 
-case 'waifu': {
-    console.log("Mensaje completo recibido:", m); // Muestra toda la estructura del mensaje para identificar errores
-
-    // Accede al texto del mensaje según la estructura de `m`
-    const messageContent = m.messages[0]?.message;
-    const text = messageContent?.conversation || messageContent?.extendedTextMessage?.text || ''; 
-    console.log("Texto recibido:", text); // Muestra el texto procesado
-
-    if (!text) {
-        await sock.sendMessage(from, { text: "Por favor, especifica el nombre de la waifu. Ejemplo: #waifu rem" });
-        break;
-    }
-
-    const args = text.split(' '); // Divide el texto por espacios
-    const waifuName = args[1]?.toLowerCase(); // Obtén el nombre de la waifu
-    console.log("Nombre de waifu:", waifuName); // Muestra el nombre de la waifu para depuración
-
-    const waifus = {
-        rem: [
-            "https://postimage.me/images/2024/11/29/1709362183412.jpg",
-            "https://postimage.me/images/2024/11/29/1709362109742.jpg",
-            "https://postimage.me/images/2024/11/29/1709362057849.jpg"
-        ],
-        emilia: [
-            "https://postimage.me/images/2024/11/29/1732915165774.jpg",
-            "https://postimage.me/images/2024/11/29/1732915221681.jpg",
-            "https://postimage.me/images/2024/11/29/1732914130942.jpg"
-        ],
-        asuna: [
-            "https://postimage.me/images/2024/11/29/1732913697820.jpg",
-            "https://postimage.me/images/2024/11/29/1732913709812.jpg",
-            "https://postimage.me/images/2024/11/29/1732913764517.jpg"
-        ],
-        miku: [
-           "https://postimage.me/images/2024/11/30/1732927724779.jpg",
-            "https://postimage.me/images/2024/11/30/1732927736031.jpg",
-            "https://postimage.me/images/2024/11/30/1732927744955.jpg"
-            ],
-            Kotegawa: [
-             "https://postimage.me/images/2024/11/30/1732928289885.jpg",
-            "https://postimage.me/images/2024/11/30/1732928298089.jpg",
-            "https://postimage.me/images/2024/11/30/1732928306306.jpg"
-           ]
-    };
-
-    if (waifuName && waifus[waifuName]) {
-        const images = waifus[waifuName];
-        const randomImage = images[Math.floor(Math.random() * images.length)];
-
-        const caption = `Aquí tienes una waifu: ${waifuName.charAt(0).toUpperCase() + waifuName.slice(1)}`;
-        await sock.sendMessage(from, { image: { url: randomImage }, caption: caption });
-    } else {
-        await sock.sendMessage(from, { text: "Lo siento, no tengo imágenes de ese personaje. Prueba con: Rem, Emilia, Asuna, etc." });
-    }
-    
-     // Inicializa el usuario si no existe en el objeto `user`
-user[sender] = user[sender] || { nivel: 1, comandos: 0 };
-
-// Incrementa los comandos usados
-user[sender].comandos += 1;
-
-// Incrementa el nivel si alcanza el umbral
-if (user[sender].comandos % comandosPorNivel === 0) {
-    user[sender].nivel += 1;
-    enviar(`🎉 ¡Felicidades! Has subido al nivel ${user[sender].nivel} (${obtenerRango(user[sender].nivel)}).`);
-}
-
-// Guarda los cambios en el archivo user.json
-fs.writeFileSync('user.json', JSON.stringify(user, null, 2));
-    fs.writeFileSync('balance.json', JSON.stringify(bal, null, 2));
-    
-    break;
-}
 
 case 'ban': {
     const senderNumber = sender.split('@')[0]; // Normaliza el remitente
@@ -2851,57 +2786,81 @@ case "wshop": {
 
     // Crear la lista de waifus a la venta
     const tiendaMensaje = wshop
-        .map((waifu, index) => 
-            `✨ ${index + 1}. *${waifu.name}*\n   - 💰 Precio: ${waifu.price} ${moneda}\n   - 🏷️ Vendido por: @${waifu.seller.split('@')[0]}`)
+        .map((waifu, index) => {
+            const nombre = waifu.nombre || "Desconocido";
+            const precio = waifu.precio || "No especificado";
+            const vendedor = waifu.vendedor ? `@${waifu.vendedor.split('@')[0]}` : "Vendedor desconocido";
+
+            return `✨ ${index + 1}. *${nombre}*\n   - 💰 Precio: ${precio} ${moneda}\n   - 🏷️ Vendido por: ${vendedor}`;
+        })
         .join("\n\n");
 
-    enviar(`🛒 *Tienda de Waifus:*\n\n${tiendaMensaje}`, { mentions: wshop.map(w => w.seller) });
+    try {
+        enviar(`🛒 *Tienda de Waifus:*\n\n${tiendaMensaje}`, { mentions: wshop.map(w => w.vendedor).filter(Boolean) });
+    } catch (error) {
+        console.error("Error al enviar el mensaje del wshop:", error);
+        enviar("❌ Hubo un error al intentar mostrar el wshop.");
+    }
+
     break;
 }
 
 
 case "buyw": {
-    const nombreWaifu = q.trim(); // Nombre de la waifu a comprar
-
-    if (!nombreWaifu) {
-        enviar("❌ Uso: #buyw <nombre_waifu>. Ejemplo: #buyw Mikasa");
+    if (!args[0]) {
+        enviar("❌ Por favor, especifica el nombre de la waifu que deseas comprar. Ejemplo: #buyw [nombre]");
         break;
     }
 
-    // Buscar la waifu en la tienda
-    const waifuIndex = wshop.findIndex(w => w.name.toLowerCase() === nombreWaifu.toLowerCase());
+    const waifuName = args[0].toLowerCase().trim(); // Convertir a minúsculas y eliminar espacios
+    const buyer = sender; // ID del comprador
+
+    // Buscar la waifu en el wshop
+    const waifuIndex = wshop.findIndex(waifu => 
+        waifu.nombre && waifu.nombre.toLowerCase() === waifuName
+    );
+
     if (waifuIndex === -1) {
-        enviar("❌ No se encontró una waifu con ese nombre en la tienda.");
+        enviar(`❌ No se encontró ninguna waifu con el nombre "${args[0]}" en el wshop.`);
         break;
     }
 
     const waifu = wshop[waifuIndex];
 
-    // Verificar si el comprador tiene suficientes coins
-    const buyerBalance = bal[sender] || 0;
-    if (buyerBalance < waifu.price) {
-        enviar(`❌ No tienes suficientes ${moneda} para comprar a "${waifu.name}". Necesitas ${waifu.price - buyerBalance} más.`);
+    // Verificar si el comprador tiene suficiente balance
+    if (!bal[buyer] || bal[buyer] < waifu.precio) {
+        enviar(`❌ No tienes suficientes ${moneda} para comprar a "${waifu.nombre}". Necesitas ${waifu.precio} ${moneda}.`);
         break;
     }
 
-    // Realizar la transacción
-    bal[sender] -= waifu.price; // Restar al comprador
-    bal[waifu.seller] = (bal[waifu.seller] || 0) + waifu.price; // Sumar al vendedor
+    // Restar el precio del balance del comprador
+    bal[buyer] -= waifu.precio;
 
-    // Transferir la waifu al comprador
-    userHarem[sender] = userHarem[sender] || [];
-    userHarem[sender].push(waifu);
+    // Agregar el balance al vendedor
+    bal[waifu.vendedor] = (bal[waifu.vendedor] || 0) + waifu.precio;
 
-    // Eliminarla de la tienda
+    // Transferir la waifu al harem del comprador
+    groupHarem[from] = groupHarem[from] || {};
+    groupHarem[from][buyer] = groupHarem[from][buyer] || [];
+    groupHarem[from][buyer].push({
+        name: waifu.nombre,
+        image: waifu.imagen,
+        value: waifu.precio,
+        votes: [],
+        gender: "Desconocido", // Agregar el género si está disponible
+        source: waifu.fuente || "Desconocido",
+        claimedBy: buyer
+    });
+
+    // Eliminar la waifu del wshop
     wshop.splice(waifuIndex, 1);
 
-    // Guardar cambios
-    fs.writeFileSync('userHarem.json', JSON.stringify(userHarem, null, 2));
-    fs.writeFileSync('wshop.json', JSON.stringify(wshop, null, 2));
+    // Guardar los cambios
     fs.writeFileSync('balance.json', JSON.stringify(bal, null, 2));
+    fs.writeFileSync('groupHarem.json', JSON.stringify(groupHarem, null, 2));
+    fs.writeFileSync('wshop.json', JSON.stringify(wshop, null, 2));
 
-    enviar(`✅ Has comprado a "${waifu.name}" por ${waifu.price} ${moneda}. Ahora está en tu harem.`);
-    guardarBalance( );
+    enviar(`✅ ¡Has comprado a "${waifu.nombre}" por ${waifu.precio} ${moneda}!`);
     break;
 }
 
@@ -3729,6 +3688,133 @@ case "delrol": {
     break;
 }
 
+case "depositar":
+case "d": {
+    if (isApagado) {
+        return enviar("❖ El bot *Destiny Neko* está desactivado en este grupo. Un *administrador* puede activarlo con el comando: » *#bot on*");
+    }
+
+    // Asegurar que el balance del usuario exista y sea válido
+    if (!bal[sender] || typeof bal[sender] !== "object" || bal[sender] === null) {
+        bal[sender] = { banco: 0, dinero: 0 }; // Crear entrada válida si no existe
+    }
+
+    const args = body.trim().split(/ +/).slice(1); // Obtener los argumentos después del comando
+    const cantidad = args[0]; // La cantidad a depositar (puede ser número o "all")
+
+    if (!cantidad) {
+        return enviar("❌ Por favor, especifica la cantidad a depositar. Ejemplo: *#depositar 100* o *#depositar all*");
+    }
+
+    const efectivoDisponible = bal[sender].dinero;
+
+    if (cantidad.toLowerCase() === "all") {
+        if (efectivoDisponible <= 0) {
+            return enviar("❌ No tienes suficiente dinero en efectivo para depositar.");
+        }
+
+        // Transferir todo el efectivo al banco
+        bal[sender].banco += efectivoDisponible;
+        bal[sender].dinero = 0;
+
+        enviar(
+            `✅ Has depositado todo tu dinero en efectivo (${efectivoDisponible} ${moneda}) al banco.\n\n` +
+            `💰 *Balance actualizado:*\n- Efectivo: *${bal[sender].dinero}* ${moneda}\n` +
+            `- Banco: *${bal[sender].banco}* ${moneda}\n` +
+            `- Total: *${bal[sender].banco + bal[sender].dinero}* ${moneda}`
+        );
+    } else {
+        const montoDepositar = parseInt(cantidad);
+
+        if (isNaN(montoDepositar) || montoDepositar <= 0) {
+            return enviar("❌ Por favor, ingresa un monto válido para depositar. Ejemplo: *#depositar 100*");
+        }
+
+        if (montoDepositar > efectivoDisponible) {
+            return enviar(`❌ No tienes suficiente efectivo para depositar. Tu efectivo actual es: *${efectivoDisponible}* ${moneda}.`);
+        }
+
+        // Transferir la cantidad especificada al banco
+        bal[sender].banco += montoDepositar;
+        bal[sender].dinero -= montoDepositar;
+
+        enviar(
+            `✅ Has depositado *${montoDepositar}* ${moneda} al banco.\n\n` +
+            `💰 *Balance actualizado:*\n- Efectivo: *${bal[sender].dinero}* ${moneda}\n` +
+            `- Banco: *${bal[sender].banco}* ${moneda}\n` +
+            `- Total: *${bal[sender].banco + bal[sender].dinero}* ${moneda}`
+        );
+    }
+
+    // Guardar cambios en el archivo de balance
+    fs.writeFileSync('balance.json', JSON.stringify(bal, null, 2));
+
+    break;
+}
+
+case "retirar":
+case "r": {
+    if (isApagado) {
+        return enviar("❖ El bot *Destiny Neko* está desactivado en este grupo. Un *administrador* puede activarlo con el comando: » *#bot on*");
+    }
+
+    // Asegurar que el balance del usuario exista y sea válido
+    if (!bal[sender] || typeof bal[sender] !== "object" || bal[sender] === null) {
+        bal[sender] = { banco: 0, dinero: 0 }; // Crear entrada válida si no existe
+    }
+
+    const args = body.trim().split(/ +/).slice(1); // Obtener los argumentos después del comando
+    const cantidad = args[0]; // La cantidad a retirar (puede ser número o "all")
+
+    if (!cantidad) {
+        return enviar("❌ Por favor, especifica la cantidad a retirar. Ejemplo: *#retirar 100* o *#retirar all*");
+    }
+
+    const saldoBanco = bal[sender].banco;
+
+    if (cantidad.toLowerCase() === "all") {
+        if (saldoBanco <= 0) {
+            return enviar("❌ No tienes suficiente dinero en el banco para retirar.");
+        }
+
+        // Retirar todo el dinero del banco
+        bal[sender].dinero += saldoBanco;
+        bal[sender].banco = 0;
+
+        enviar(
+            `✅ Has retirado todo tu dinero del banco (${saldoBanco} ${moneda}).\n\n` +
+            `💰 *Balance actualizado:*\n- Efectivo: *${bal[sender].dinero}* ${moneda}\n` +
+            `- Banco: *${bal[sender].banco}* ${moneda}\n` +
+            `- Total: *${bal[sender].banco + bal[sender].dinero}* ${moneda}`
+        );
+    } else {
+        const montoRetirar = parseInt(cantidad);
+
+        if (isNaN(montoRetirar) || montoRetirar <= 0) {
+            return enviar("❌ Por favor, ingresa un monto válido para retirar. Ejemplo: *#retirar 100*");
+        }
+
+        if (montoRetirar > saldoBanco) {
+            return enviar(`❌ No tienes suficiente dinero en el banco para retirar. Tu saldo actual en el banco es: *${saldoBanco}* ${moneda}.`);
+        }
+
+        // Retirar la cantidad especificada del banco
+        bal[sender].dinero += montoRetirar;
+        bal[sender].banco -= montoRetirar;
+
+        enviar(
+            `✅ Has retirado *${montoRetirar}* ${moneda} del banco.\n\n` +
+            `💰 *Balance actualizado:*\n- Efectivo: *${bal[sender].dinero}* ${moneda}\n` +
+            `- Banco: *${bal[sender].banco}* ${moneda}\n` +
+            `- Total: *${bal[sender].banco + bal[sender].dinero}* ${moneda}`
+        );
+    }
+
+    // Guardar cambios en el archivo de balance
+    fs.writeFileSync('balance.json', JSON.stringify(bal, null, 2));
+
+    break;
+}
 
 case "":
 enviar("ese comando no existe usa #help para ver la lista de comandos");
