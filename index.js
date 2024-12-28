@@ -1886,7 +1886,7 @@ case "vote":
         enviar(`❌ No se encontró la waifu "${args[0]}".`);
     } else {
         const now = Date.now(); // Hora actual
-        const userVotes = waifuVotes[waifu.namev] || {}; // Obtener los votos para esta waifu
+        const userVotes = waifuVotes[waifu.name] || {}; // Obtener los votos para esta waifu
         const userLastVote = userVotes[sender]; // Última vez que este usuario votó
 
         // Verificar si el usuario ya votó y si debe esperar
@@ -1895,18 +1895,18 @@ case "vote":
             enviar(`⏳ Ya votaste por "${waifu.name}". Por favor, espera ${timeLeft} minutos para volver a votar.`);
         } else {
             // Registrar el nuevo voto
-            waifuVotes[waifu.namev] = {
+            waifuVotes[waifu.name] = {
                 ...userVotes,
                 [sender]: now // Actualizar el tiempo de último voto
             };
 
-            waifu.value += 10; // Incrementar el valor
+            waifu.value += 100; // Incrementar el valor
 
             // Guardar cambios en la base de datos y los votos
             fs.writeFileSync(waifuDBPath, JSON.stringify(waifus, null, 2));
             saveWaifuVotes();
 
-            enviar(`✅ Has votado por "${waifu.namev}". Su valor ahora es de ${waifu.value} coins.`);
+            enviar(`✅ Has votado por "${waifu.name}". Su valor ahora es de ${waifu.value} coins.`);
         }
     }
     break;
