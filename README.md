@@ -1,13 +1,19 @@
 
 # Destiny Neko Bot
 
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=FF0000&center=true&width=500&lines=🌹+Bienvenido+al+Repositorio+Oficial;✨Destiny+Neko+Bot✨;Innovando+cada+d%C3%ADa+para+ti!" alt="Typing SVG">
+</p>
+
+---
+
 🌹 **WhatsApp Bot Node-Js**  
 Repositorio oficial del innovador **Destiny Neko Bot**, diseñado para ofrecer funciones exclusivas y en constante evolución.
 
 ---
 
 ## 🚀 Versión
-**v1.2**
+**v1.0**
 
 ---
 
@@ -28,7 +34,6 @@ Si deseas alguna funcionalidad adicional, comunícate con el desarrollador. ¡Tu
 
 ---
 
-
 ## ☁️ Hosting Recomendado
 
 ### **Masha Hosting**
@@ -36,6 +41,7 @@ Si deseas alguna funcionalidad adicional, comunícate con el desarrollador. ¡Tu
 - **Canal de WhatsApp:** [Unirse](https://whatsapp.com/channel/0029VaoyLfA0LKZKjEh5Yh1J)
 - **Código de Referencia:** `d7EMOE9D`
 
+### **Otros Hosting Disponibles**
 #### Sky Ultra Plus
 - **Dashboard:** [Click aquí](https://dash.skyultraplus.com)
 - **Panel:** [Click aquí](https://panel.skyultraplus.com)
