@@ -366,8 +366,8 @@ return admins
 // Constantes Editables
 const prefixo = "#"; // Cambiar Prefijo Aquí
 const wm = "Destiny Oficial" // cambiar creador
-let botname = "Destiny Neko" // Cambiar nombre del bot
-let moneda = "coins" //cambia el nombre de la moneda 
+let botname = "Kitten gif" // Cambiar nombre del bot
+let moneda = "NekoCoins" //cambia el nombre de la moneda 
 
 
 // cambiar el banner de bot
@@ -729,8 +729,19 @@ para depositar tu dinero en el banco.
 *retirar* - *r* + [cantidad/all]
 para retirar dinero del banco.
 
+nuevo comando *NSFW* *+18*
 
+*nsfwon/off
+para apagar o encender los comandos NSFW(+18).
 
+*bj + @mencion*
+para dar un mamada a alguien.
+
+*fuck + @mencion*
+para cojer a alguien.
+
+*cum + @mencion*
+para cumear a alguien.
 
 *✐ Comandos de *Gacha* para conseguir waifu y un harem con tu jugar con tus amigos*
 
@@ -745,6 +756,9 @@ para retirar dinero del banco.
 
 ✦ *#wimage [nombre]*
 → para ver la información de la waifu.
+
+*winfo [nombre]*
+para ver ka información de una waifu.
 
 ✦ *#vote [nombre]*
 → para subir el valor de una waifu.
@@ -784,6 +798,8 @@ para retirar dinero del banco.
 ✦ *#off*
 → para apagar el bot de un grupo.
 
+*#kick @mencion*
+para expulsar a alguien
 
 »  ⊹˚୨ •(=^●ω●^=)•  *Download* ⊹
 
