@@ -1,0 +1,408 @@
+[
+  {
+    "name": "Destiny",
+    "image": "https://i.postimg.cc/N0VSvjk2/image.jpg",
+    "value": 50,
+    "votes": [],
+    "source": "Takt Op Destiny"
+  },
+  {
+    "name": "EMI",
+    "images": [
+      "https://i.postimg.cc/N0VSvjk2/image.jpg",
+      "https://i.postimg.cc/N0VSvjk2/image.jpg"
+    ],
+    "value": 100,
+    "votes": [],
+    "gender": "No especificado",
+    "source": "prueba"
+  },
+  {
+    "name": "Mai_sakurajima",
+    "images": [
+      "https://postimage.me/images/2025/01/16/3d609eac15158ba440d01fea540f3fa1.jpg"
+    ],
+    "value": 100,
+    "votes": [],
+    "gender": "Mujer",
+    "source": "Seishun buta yarou Wa bunny girl sempay no Yume wo minai"
+  },
+  {
+    "name": "Chifuyu_Matsuno",
+    "images": [
+      "https://postimage.me/images/2025/01/16/IMG-20250116-WA0013.jpg"
+    ],
+    "value": 100,
+    "votes": [],
+    "gender": "Hombre",
+    "source": "Tokyo Revengers"
+  },
+  {
+    "name": "Senju_Akashi",
+    "images": [
+      "https://postimage.me/images/2025/01/16/IMG-20250116-WA0014.jpg"
+    ],
+    "value": 100,
+    "votes": [],
+    "gender": "mujer",
+    "source": "Tokyo Revengers"
+  },
+  {
+    "name": "Souya_Kawata",
+    "images": [
+      "https://postimage.me/images/2025/01/16/IMG-20250116-WA0019.png"
+    ],
+    "value": 100,
+    "votes": [],
+    "gender": "Hombre",
+    "source": "Tokyo Revengers"
+  },
+  {
+    "name": "Hinata_Tachibana",
+    "images": [
+      "https://postimage.me/images/2025/01/16/IMG-20250116-WA0021.jpg"
+    ],
+    "value": 110,
+    "votes": [],
+    "gender": "Mujer",
+    "source": "Tokyo Revengers"
+  },
+  {
+    "name": "Manjiro_Sano",
+    "images": [
+      "https://postimage.me/images/2025/01/16/IMG-20250116-WA0011.jpg"
+    ],
+    "value": 100,
+    "votes": [],
+    "gender": "Hombre",
+    "source": "Tokyo Revengers"
+  },
+  {
+    "name": "Keisuke_Baji",
+    "images": [
+      "https://postimage.me/images/2025/01/16/265e6d89403537cdbd91efbdc6a90a43.jpg"
+    ],
+    "value": 100,
+    "votes": [],
+    "gender": "Hombre",
+    "source": "Tokyo Revengers"
+  },
+  {
+    "name": "Haruchiyo_Akashi",
+    "images": [
+      "https://postimage.me/images/2025/01/16/cb7b9dd6d3b934073a11831eb94dd049.jpg"
+    ],
+    "value": 100,
+    "votes": [],
+    "gender": "Hombre",
+    "source": "Tokyo Revengers"
+  },
+  {
+    "name": "Hajime_Kokonoi",
+    "images": [
+      "https://postimage.me/images/2025/01/16/e482328cee7108443eba955d7682e590.jpg"
+    ],
+    "value": 100,
+    "votes": [],
+    "gender": "Hombre",
+    "source": "Tokyo Revengers"
+  },
+  {
+    "name": "Wakasa_Imaushi",
+    "images": [
+      "https://postimage.me/images/2025/01/16/ed5f1b3ac221e71e7b2ebfb0e522c6e7.jpg"
+    ],
+    "value": 100,
+    "votes": [],
+    "gender": "Hombre",
+    "source": "Tokyo Revengers"
+  },
+  {
+    "name": "Izana_Kurokawa",
+    "images": [
+      "https://postimage.me/images/2025/01/16/e6c2e94d22bdb465546ce9b44da6d85d.jpg"
+    ],
+    "value": 100,
+    "votes": [],
+    "gender": "Hombre",
+    "source": "Tokyo Revengers"
+  },
+  {
+    "name": "Ken_Takakura",
+    "images": [
+      "https://postimage.me/images/2025/01/16/2167f1917796654a36119fae2da92f7a.jpg",
+      "https://postimage.me/images/2025/01/17/3a682d2d188e5c0b2254f229393aa3db.jpg",
+      "https://postimage.me/images/2025/01/17/f9eb730232ab1037a7d7a9e5013b4008.jpg",
+      "https://postimage.me/images/2025/01/17/7e9d08c8bf864763b5f11938737867ff.jpg",
+      "https://postimage.me/images/2025/01/17/bc260ae0eafa0f2134b9e87ec3257db0.jpg"
+    ],
+    "value": 100,
+    "votes": [],
+    "gender": "Hombre",
+    "source": "Dandadan"
+  },
+  {
+    "name": "Momo_Ayase",
+    "images": [
+      "https://postimage.me/images/2025/01/16/627c05a079f4d854cb3555faebc43adb.jpg",
+      "https://postimage.me/images/2025/01/17/0aea6a89ceb62009780d2fef821ddfe1.jpg",
+      "https://postimage.me/images/2025/01/17/e0d07d9d60ff842b25df9ff8ed4eb0b8.jpg",
+      "https://postimage.me/images/2025/01/17/706b932089b9a6f4f52de5e447efde3b.jpg",
+      "https://postimage.me/images/2025/01/17/974561a86cc563f0f4e7b3c59931bcc6.jpg"
+    ],
+    "value": 100,
+    "votes": [],
+    "gender": "Mujer",
+    "source": "Dandadan"
+  },
+  {
+    "name": "Seiko_Ayase",
+    "images": [
+      "https://postimage.me/images/2025/01/16/f4e12cd81125902eff065d066df3f002.jpg",
+      "https://postimage.me/images/2025/01/17/17b255e2288e672373abc01d5c8fae3c.jpg",
+      "https://postimage.me/images/2025/01/17/ce2e017604e90677d4a0ea4f2d040501.jpg",
+      "https://postimage.me/images/2025/01/17/80b07a6caec72bfc48b26730d4a671a8.jpg",
+      "https://postimage.me/images/2025/01/17/f9d9d32249527f5a8a20868fc6861a20.jpg",
+      "https://postimage.me/images/2025/01/17/634987bfc2ba8f2719838535381a6bdc.jpg",
+      "https://postimage.me/images/2025/01/17/4d1fcf5c80a871c4af28ce19aa791974.jpg",
+      "https://postimage.me/images/2025/01/17/c1bee914b52d8d530605cf1f098285e9.jpg"
+    ],
+    "value": 100,
+    "votes": [],
+    "gender": "Mujer",
+    "source": "Dandadan"
+  },
+  {
+    "name": "Izumi_sagiri",
+    "images": [
+      "https://postimage.me/images/2025/01/14/1736830816819.jpg"
+    ],
+    "value": 100,
+    "votes": [],
+    "gender": "mujer/*!!Loli!!*",
+    "source": "Ero manga-sensei",
+    "claimedBy": "5213339992782@s.whatsapp.net"
+  },
+  {
+    "name": "saber",
+    "images": [
+      "https://i.postimg.cc/TPxrSY33/1731625818030.jpg"
+    ],
+    "value": 100,
+    "votes": [],
+    "gender": "No especificado",
+    "source": "Fate Stay Night"
+  },
+  {
+    "name": "rem",
+    "images": [
+      "https://i.postimg.cc/3rGmRKqf/1709362057849.jpg"
+    ],
+    "value": 100,
+    "votes": [],
+    "gender": "No especificado",
+    "source": "Re Zero"
+  },
+  {
+    "name": "Kurumi",
+    "images": [
+      "https://i.postimg.cc/3rGmRKqf/1709362057849.jpg"
+    ],
+    "value": 100,
+    "votes": [],
+    "gender": "No especificado",
+    "source": "date a live"
+  },
+  {
+    "name": "Asuna",
+    "images": [
+      "https://i.postimg.cc/HLMZ3TK6/1731625531727.jpg"
+    ],
+    "value": 100,
+    "votes": [],
+    "gender": "No especificado",
+    "source": "sword art online"
+  },
+  {
+    "name": "Miku",
+    "images": [
+      "https://postimage.me/images/2024/11/30/1732927744955.jpg"
+    ],
+    "value": 100,
+    "votes": [],
+    "gender": "No especificado",
+    "source": "quintillisas"
+  },
+  {
+    "name": "Valquiria",
+    "images": [
+      "https://postimage.me/images/2024/12/17/1734413257726.jpg"
+    ],
+    "value": 100,
+    "votes": [],
+    "gender": "No especificado",
+    "source": "Takt Op Destiny"
+  },
+  {
+    "name": "Titan",
+    "images": [
+      "https://postimage.me/images/2024/12/17/1734413305091.jpg"
+    ],
+    "value": 100,
+    "votes": [],
+    "gender": "No especificado",
+    "source": "Takt Op Destiny"
+  },
+  {
+    "name": "Cielo",
+    "images": [
+      "https://postimage.me/images/2024/12/17/1734413295503.jpg"
+    ],
+    "value": 100,
+    "votes": [],
+    "gender": "No especificado",
+    "source": "Takt Op Destiny"
+  },
+  {
+    "name": "Josué",
+    "images": [
+      "https://postimage.me/images/2024/12/17/1730319011116.jpg"
+    ],
+    "value": 100,
+    "votes": [],
+    "gender": "No especificado",
+    "source": "Original"
+  },
+  {
+    "name": "Ana_Fachera",
+    "images": [
+      "https://postimage.me/images/2024/12/17/IMG-20241030-WA0060.jpg"
+    ],
+    "value": 100,
+    "votes": [],
+    "gender": "No especificado",
+    "source": "Original"
+  },
+  {
+    "name": "Jona",
+    "images": [
+      "https://postimage.me/images/2024/12/17/IMG-20241030-WA0059.jpg"
+    ],
+    "value": 100,
+    "votes": [],
+    "gender": "No especificado",
+    "source": "Original"
+  },
+  {
+    "name": "sora_kasugano",
+    "images": [
+      "https://postimage.me/images/2024/12/20/IMG-20241218-WA0228.jpg"
+    ],
+    "value": 100,
+    "votes": [],
+    "gender": "No especificado",
+    "source": "Yosuga no sora"
+  },
+  {
+    "name": "So",
+    "images": [
+      "https://postimage.me/images/2024/12/17/IMG-20241216-WA0141.jpg"
+    ],
+    "value": 100,
+    "votes": [],
+    "gender": "No especificado",
+    "source": "Original"
+  },
+  {
+    "name": "Neko's_club",
+    "images": [
+      "https://postimage.me/images/2024/12/17/1729744007165.jpg"
+    ],
+    "value": 100,
+    "votes": [],
+    "gender": "No especificado",
+    "source": "Original"
+  },
+  {
+    "name": "Aira_Shiratori",
+    "images": [
+      "https://postimage.me/images/2025/01/16/0cf3c6ffc119bf5b5011405673ca594c.jpg",
+      "https://postimage.me/images/2025/01/17/IMG-20250117-WA0042.jpg",
+      "https://postimage.me/images/2025/01/17/IMG-20250117-WA0042.jpg",
+      "https://postimage.me/images/2025/01/17/IMG-20250117-WA00431.jpg",
+      "https://postimage.me/images/2025/01/17/IMG-20250117-WA0045.jpg",
+      "https://postimage.me/images/2025/01/17/IMG-20250117-WA0082.jpg"
+    ],
+    "value": 100,
+    "votes": [],
+    "gender": "Mujer",
+    "source": "Dandadan"
+  },
+  {
+    "name": "Chiquitita",
+    "images": [
+      "https://postimage.me/images/2025/01/16/ec5d101c95bd6236b1ae611cc27ab5c7.jpg"
+    ],
+    "value": 100,
+    "votes": [],
+    "gender": "Mujer",
+    "source": "Dandadan"
+  },
+  {
+    "name": "Turbo_Granny",
+    "images": [
+      "https://postimage.me/images/2025/01/17/ce3d7077eeb8072a51add63938b866d1.jpg",
+      "https://postimage.me/images/2025/01/17/a18c9ac6907c8df3a9dd3b48663d90d2.jpg",
+      "https://postimage.me/images/2025/01/17/2c774a3a837484f4d68f9240779bdce6.jpg",
+      "https://postimage.me/images/2025/01/17/9214fa337b882cb02f75285ae20555fd.jpg"
+    ],
+    "value": 100,
+    "votes": [],
+    "gender": "Mujer",
+    "source": "Dandadan"
+  },
+  {
+    "name": "Vamola",
+    "images": [
+      "https://postimage.me/images/2025/01/17/c75b8c27e7c6ce8d84b59727f23eb93b.jpg",
+      "https://postimage.me/images/2025/01/17/52a1fcc4b1bd872ad59a8d252c523da5.jpg"
+    ],
+    "value": 100,
+    "votes": [],
+    "gender": "Mujer",
+    "source": "Dandadan"
+  },
+  {
+    "name": "Jin_Enjouji",
+    "images": [
+      "https://postimage.me/images/2025/01/17/e38f39ced00978eeaee8a7c94b709354.jpg",
+      "https://postimage.me/images/2025/01/17/d6de393b98a782cc20147920b6be7cb5.jpg",
+      "https://postimage.me/images/2025/01/17/aa18b3866d6018a60aa9564e7b3799ee.jpg"
+    ],
+    "value": 100,
+    "votes": [],
+    "gender": "Hombre",
+    "source": "Dandadan"
+  },
+  {
+    "name": "Kinta_Sakata",
+    "images": [
+      "https://postimage.me/images/2025/01/17/5b8ce00477ebe6f079147992eebbec76.jpg"
+    ],
+    "value": 100,
+    "votes": [],
+    "gender": "Hombre",
+    "source": "Dandadan"
+  },
+  {
+    "name": "Acrobatic_Silky",
+    "images": [
+      "https://postimage.me/images/2025/01/17/864e0406d77919edfc44911e10d00d52.jpg",
+      "https://postimage.me/images/2025/01/17/a7527d828f1d89fd2dfd00fb43591fb6.jpg"
+    ],
+    "value": 100,
+    "votes": [],
+    "gender": "Mujer",
+    "source": "Dandadan"
+  }
+]
