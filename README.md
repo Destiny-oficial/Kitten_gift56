@@ -1,19 +1,19 @@
 
-# Destiny Neko Bot
+# Destiny Kitten gift 
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=FF0000&center=true&width=500&lines=🌹+Bienvenido+al+Repositorio+Oficial;✨Destiny+Neko+Bot✨;Innovando+cada+d%C3%ADa+para+ti!" alt="Typing SVG">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=FF0000&center=true&width=500&lines=🌹+Bienvenido+al+Repositorio+Oficial;✨Destiny+Kitten+Bot✨;Innovando+cada+d%C3%ADa+para+ti!" alt="Typing SVG">
 </p>
 
 ---
 
 🌹 **WhatsApp Bot Node-Js**  
-Repositorio oficial del innovador **Destiny Neko Bot**, diseñado para ofrecer funciones exclusivas y en constante evolución.
+Repositorio oficial del innovador **Destiny Kitten bot**, diseñado para ofrecer funciones exclusivas y en constante evolución.
 
 ---
 
 ## 🚀 Versión
-**v1.2**
+**v1.8**
 
 ---
 
@@ -29,35 +29,14 @@ Si deseas alguna funcionalidad adicional, comunícate con el desarrollador. ¡Tu
 
 ## 📞 Contáctanos
 - **Correo:** destiny58336@gmail.com
-- **WhatsApp 1:** [Click aquí](https://wa.me/523344753421)
-- **WhatsApp 2:** [Click aquí](https://wa.me/523339992782)
+- **WhatsApp 1:** [Click aquí](https://wa.me/5213344753421)
+- **WhatsApp 2:** [Click aquí](https://wa.me/5213339992782)
+- **Grupo Soporte:** [Click aquí](https://chat.whatsapp.com/FG4nnZTV138Lw1wIaskuQg)
 
 ---
 
 ## ☁️ Hosting Recomendado
-
-### **Masha Hosting**
-- **Dashboard:** [Masha Hosting](https://dash.masha-host.shop)
-- **Canal de WhatsApp:** [Unirse](https://whatsapp.com/channel/0029VaoyLfA0LKZKjEh5Yh1J)
-- **Código de Referencia:** `Destiny`
-
-### **Otros Hosting Disponibles**
-#### Sky Ultra Plus
-- **Dashboard:** [Click aquí](https://dash.skyultraplus.com)
-- **Panel:** [Click aquí](https://panel.skyultraplus.com)
-- **WhatsApp:** [Unirse](https://whatsapp.com/channel/0029VakUvreFHWpyWUr4Jr0g)
-
-#### Cloud Starlights
-- **Dashboard:** [Click aquí](https://dash.starlights.uk)
-- **Panel:** [Click aquí](https://cloud.starlights.uk)
-- **WhatsApp:** [Unirse](https://whatsapp.com/channel/0029VaBfsIwGk1FyaqFcK91S)
-
-#### Hosting Py
-- **Dashboard:** [Click aquí](https://dahs.hostingpy.shop)
-- **Panel:** [Click aquí](https://panel.hostingpy.shop)
-- **WhatsApp:** [Unirse](https://whatsapp.com/channel/0029Vak4e1R4NVifmh8Tvi3q)
-- **Código de Referencia:** `VOed0vMx`
-
+nada xd
 ---
 
 ## 🛡 Licencia
@@ -66,8 +45,8 @@ Distribuido bajo la Licencia MIT. Consulta `LICENSE` para más detalles.
 ---
 
 ## 💖 Agradecimientos
-A todos los usuarios que confían y utilizan Destiny Neko Bot. ¡Gracias por preferirnos!
+A todos los usuarios que confían y utilizan Destiny Kitten Bot. ¡Gracias por preferirnos!
 
 ---
 
-© 2024 Destiny Neko Bot
+© 2024 Destiny Kitten Bot
