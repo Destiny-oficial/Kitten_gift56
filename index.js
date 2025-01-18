@@ -48,6 +48,7 @@ const loadSorteo = () => {
 
 // Función para ejecutar el sorteo
 
+const sharp = require('sharp');
 
 let botAdminMode = {}; // Objeto global para guardar estados por grupo
 
@@ -5295,56 +5296,60 @@ case "pay": {
     break;
 }
 
-case "sticker":
-case "s": {
+case "s":
+case "sticker": {
     try {
-        // Verificar o crear el directorio ./temp/
-        const tempDir = './temp';
-        if (!existsSync(tempDir)) {
-            mkdirSync(tempDir);
+        const tempDir = './temp'; // Directorio temporal
+        const inputPath = `${tempDir}/input.jpg`; // Archivo de entrada
+        const outputPath = `${tempDir}/output.webp`; // Archivo de salida
+
+        // Crear directorio temporal si no existe
+        if (!existsSync(tempDir)) mkdirSync(tempDir);
+
+        // Determinar si el contenido es una imagen válida
+        const mediaType = isImage || isQuotedImage ? "image" : null;
+
+        if (!mediaType) {
+            return enviar("❌ Por favor, responde o envía una imagen para convertir en sticker.");
         }
 
-        // Determinar si es imagen o video
-        const mediaMessage = isQuotedImage || isQuotedVideo
-            ? quoted.message[isQuotedImage ? "imageMessage" : "videoMessage"]
-            : info.message[isImage ? "imageMessage" : "videoMessage"];
+        const mediaMessage = isQuotedImage
+            ? quoted.message.imageMessage
+            : info.message.imageMessage;
 
         if (!mediaMessage) {
-            return enviar("❌ Por favor, responde o envía una imagen o video para convertir en sticker.");
+            return enviar("❌ No se pudo procesar la imagen. Intenta nuevamente.");
         }
 
-        // Descargar el contenido multimedia
-        const buffer = await getFileBuffer(mediaMessage, isImage || isQuotedImage ? "image" : "video");
-
-        // Rutas para los archivos temporales
-        const inputPath = `${tempDir}/input.${isImage || isQuotedImage ? 'jpg' : 'mp4'}`;
-        const outputPath = `${tempDir}/output.webp`;
-
-        // Guardar el archivo temporalmente
+        // Descargar y guardar la imagen
+        const buffer = await getFileBuffer(mediaMessage, "image");
         writeFileSync(inputPath, buffer);
 
-        // Convertir a WebP
-        await webp.cwebp(inputPath, outputPath, "-q 80");
+        // Notificar al usuario
+        enviar("⏳ Procesando tu sticker, por favor espera...");
 
-        // Leer el archivo convertido
+        // Convertir la imagen a WebP usando sharp
+        await sharp(inputPath)
+            .webp({ quality: 80 }) // Ajustar calidad al 80%
+            .toFile(outputPath);
+
+        // Leer el archivo WebP generado
         const webpBuffer = readFileSync(outputPath);
 
-        // Enviar como sticker
-        await sock.sendMessage(from, {
-            sticker: webpBuffer,
-        }, { quoted: info });
+        // Enviar el sticker
+        await sock.sendMessage(from, { sticker: webpBuffer }, { quoted: info });
 
-        // Eliminar archivos temporales
+        // Limpiar archivos temporales
         unlinkSync(inputPath);
         unlinkSync(outputPath);
 
         enviar("✅ Sticker creado con éxito.");
     } catch (error) {
-        console.error("Error al crear el sticker:", error);
+        console.error("❌ Error al crear el sticker:", error);
         enviar("❌ Ocurrió un error al intentar crear el sticker. Intenta nuevamente.");
     }
     break;
-}
+			      }
 
 case "addimage": {
     // Verifica que se haya proporcionado el nombre de la waifu y la URL
