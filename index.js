@@ -11,12 +11,10 @@ const fs = require('fs')
 const axios = require('axios');
 const ytSearch = require('yt-search');
 // Variable para manejar el estado mute
-let isMuted = false;
-const { igdl } = require('ruhend-scraper'); // Librería para descargar desde IG/FB
+let isMuted = false
 
 const path = require('path');
 
-const webp = require('webp-converter');
 const { writeFileSync, existsSync, mkdirSync, unlinkSync, readFileSync } = require('fs');
 
 // Función para enviar mensajes
@@ -48,7 +46,6 @@ const loadSorteo = () => {
 
 // Función para ejecutar el sorteo
 
-const sharp = require('sharp');
 
 let botAdminMode = {}; // Objeto global para guardar estados por grupo
 
